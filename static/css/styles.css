@@ -1,0 +1,66 @@
+html,
+body,
+#root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.view-content {
+    flex: 1;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.patent-section {
+    flex: 1;
+    min-height: 0;
+    overflow: auto;
+}
+
+@media (max-width: 768px) {
+    .patent-sections {
+        flex-direction: column;
+    }
+
+    .patent-section {
+        max-height: 50vh;
+    }
+}
+
+.resize-handle {
+    cursor: row-resize;
+    padding: 4px 0;
+    background-color: #f3f4f6;
+    border-top: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.resize-handle:hover {
+    background-color: #e5e7eb;
+}
+
+textarea {
+    resize: none;
+    min-height: 100px;
+}
+
+@media (min-width: 768px) {
+    textarea {
+        min-height: 150px;
+    }
+}
